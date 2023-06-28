@@ -1,0 +1,56 @@
+.card {
+  background-image: linear-gradient(-128deg, rgba(255, 181, 32, 0.93) 20%, rgba(239, 39, 153, 0.93) 80%, rgba(237, 18, 171, 0.93) 100%);
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(227, 221, 240, 0.774);
+  background-color: cadetblue; 
+  padding: 10px;
+  margin: 25px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.answer-card {
+    border-radius: 12px;
+    padding: 10px;
+}
+
+select {
+    font-weight: bold;
+}
+
+option {
+    font-weight: bold;
+}
+
+.form-submit {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    font-weight: bold;
+}
+
+.all-questions {
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+@font-face {
+    font-family: 'Kablammo';
+    src: local('Kablammo'), url(../UI/fonts/Kablammo-Regular.ttf) format('truetype');
+  }
+
+.container {
+    background-image: linear-gradient(-128deg, rgba(255, 181, 32, 0.93) 20%, rgba(239, 39, 153, 0.93) 80%, rgba(237, 18, 171, 0.93) 100%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: 'Kablammo';
+}
+  
+
