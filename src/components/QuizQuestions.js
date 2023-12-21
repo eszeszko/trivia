@@ -16,25 +16,36 @@ function QuizQuestions(props) {
             return response.json();
         })
         .then((data) => {
-            data = Object.values(data.results);
+            if(data.results && data.results.length > 0) {
+                const formattedData = data.results.map((item) => {
+                    return {question: item.question, ...item};
+                });
+            // data = Object.values(data.results);
             console.log(data);
-            setQuestions(data);
+            setQuestions(formattedData);
+            }
         })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+        });
     }, [props.category, props.difficulty])
 
 
     return (
         <div>
             <div className="all-questions">
-            {questions.map(q=>
-            <div key={Math.random()} className='card'>
-                <p>{q.question}</p>
-                <Answers question={q}></Answers>
-            </div>
-            )}
+                {questions.length > 0 ? (
+                    questions.map((q) => (
+                        <div key={Math.random()} className='card'>
+                        <p>{q.question}</p>
+                        <Answers question={q}></Answers>
+                        </div>
+                    ))
+                ) : (
+                    <p> Loading....</p>
+                )}
             </div>
         </div>
-        
     )   
 }
 
