@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import QuizQuestions from "./QuizQuestions";
 import "./UI/style.css";
 
+// trying this out with git remote branches! 
 function Categories() {
     const [categories, setCategories] = useState([]);
     const [difficulty, setDifficulty] = useState('easy');
