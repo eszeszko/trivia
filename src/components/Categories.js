@@ -3,6 +3,7 @@ import QuizQuestions from "./QuizQuestions";
 import "./UI/style.css";
 
 // trying this out with git remote branches! 
+// pushing to remote branch with diff branch name
 function Categories() {
     const [categories, setCategories] = useState([]);
     const [difficulty, setDifficulty] = useState('easy');
